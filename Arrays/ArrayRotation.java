@@ -16,4 +16,3 @@ public class ArrayRotation {
         System.out.println(String.join(" ",arr));
     }
 }
-//коментар
