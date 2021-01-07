@@ -4,10 +4,14 @@ package Arrays;
 import java.util.Scanner;
 
 public class RecursiveFibonacci {
+
     public static void main(String[] args) {
+
         Scanner scan = new Scanner(System.in);
         int n = Integer.parseInt(scan.nextLine());
+
         int[] arr = new int[n];
+
         if (n == 0) {
             System.out.println(0);
             return;
