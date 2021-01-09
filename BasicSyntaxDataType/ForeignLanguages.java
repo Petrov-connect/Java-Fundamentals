@@ -1,24 +1,31 @@
-package BsicSyntaxDataType;
+package BasicSyntaxDataType;
 //created by J.M.
+
 import java.util.Scanner;
 
 public class ForeignLanguages {
+
     public static void main(String[] args) {
+
         Scanner scan = new Scanner(System.in);
         String country = scan.nextLine();
-        String languige;
-        switch (country){
-            case"England":
-            case"USA":
-                languige="English";
+
+        String language;
+
+        switch (country) {
+            case "England":
+            case "USA":
+                language = "English";
                 break;
-            case"Spain":
-            case"Argentina":
-            case"Mexico":
-                languige="Spanish";
+            case "Spain":
+            case "Argentina":
+            case "Mexico":
+                language = "Spanish";
                 break;
-            default: languige="unknown"; break;
+            default:
+                language = "unknown";
+                break;
         }
-        System.out.println(languige);
+        System.out.println(language);
     }
 }
