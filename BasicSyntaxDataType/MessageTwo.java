@@ -1,18 +1,23 @@
-package BsicSyntaxDataType;
+package BasicSyntaxDataType;
 //created by J.M.
+
 import java.util.Scanner;
 
-public class Message2 {
+public class MessageTwo {
+
     public static void main(String[] args) {
+
         Scanner scan = new Scanner(System.in);
-        int count=Integer.parseInt(scan.nextLine());
-        StringBuilder word= new StringBuilder();
-        for(int i=1; i<=count; i++){
+        int count = Integer.parseInt(scan.nextLine());
+
+        StringBuilder word = new StringBuilder();
+
+        for (int i = 1; i <= count; i++) {
             String num = scan.nextLine();
             char symbol;
-            if(num.equals("0")){
-               symbol=' ';
-            }else {
+            if (num.equals("0")) {
+                symbol = ' ';
+            } else {
                 int numberOfDigit = num.length();
                 int mainDigit = Integer.parseInt(String.valueOf((num).charAt(0)));
                 int offset = (mainDigit - 2) * 3;
