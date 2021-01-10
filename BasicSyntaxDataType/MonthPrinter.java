@@ -1,12 +1,17 @@
-package BsicSyntaxDataType;
+package BasicSyntaxDataType;
 //created by J.M.
+
 import java.util.Scanner;
 
 public class MonthPrinter {
+
     public static void main(String[] args) {
+
         Scanner scan = new Scanner(System.in);
         int mont=Integer.parseInt(scan.nextLine());
+
         String montName;
+
         switch (mont){
             case 1: montName="January"; break;
             case 2: montName="February"; break;
