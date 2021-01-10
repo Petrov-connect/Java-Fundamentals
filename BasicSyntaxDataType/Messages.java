@@ -1,15 +1,22 @@
-package BsicSyntaxDataType;
+package BasicSyntaxDataType;
 //created by J.M.
+
 import java.util.Scanner;
 
 public class Messages {
+
     public static void main(String[] args) {
+
         Scanner scan = new Scanner(System.in);
         int count = Integer.parseInt(scan.nextLine());
+
         StringBuilder word= new StringBuilder();
+
         for(int i=1; i<=count; i++){
+
             String num=scan.nextLine();
             String symbol="";
+
             switch (num){
                 case "0": symbol =" "; break;
                 case "2":  symbol = "a" ; break;
