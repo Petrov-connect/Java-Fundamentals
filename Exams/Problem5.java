@@ -1,11 +1,16 @@
 package Exams;
 //created by J.M.
+
 import java.util.*;
+
 public class Problem5 {
+
     public static void main(String[] args) {
+
         Scanner scan = new Scanner(System.in);
         Map<String, List<String>> usersInfo = new TreeMap<>();
         String input;
+
         while (!"Statistics".equals(input = scan.nextLine())) {
             String[] command = input.split("->");
             switch (command[0]) {
@@ -32,9 +37,11 @@ public class Problem5 {
         }
         System.out.printf("Users count: %d%n", usersInfo.size());
         usersInfo.entrySet().stream().sorted((a, b) -> Integer.compare(b.getValue().size(), a.getValue().size()))
-                .forEach(e ->{ System.out.printf("%s%n", e.getKey());
-                    if(!e.getValue().isEmpty()){
+                .forEach(e -> {
+                    System.out.printf("%s%n", e.getKey());
+                    if (!e.getValue().isEmpty()) {
                         System.out.println("- " + String.join("\n- ", e.getValue()));
-                    }});
+                    }
+                });
     }
 }
