@@ -1,12 +1,16 @@
 package Exams;
 //created by J.M.
+
 import java.util.*;
 
 public class Pirates {
+
     public static void main(String[] args) {
+
         Scanner scan = new Scanner(System.in);
         String input;
         Map<String, int[]> towns = new TreeMap<>();
+
         while (!"Sail".equals(input = scan.nextLine())) {
             String[] town = input.split("\\|\\|");
             towns.putIfAbsent(town[0], new int[2]);
@@ -27,7 +31,8 @@ public class Pirates {
                     }
                     break;
                 case "Prosper":
-                    if (Integer.parseInt(command[2]) < 0) { System.out.println("Gold added cannot be a negative number!");
+                    if (Integer.parseInt(command[2]) < 0) {
+                        System.out.println("Gold added cannot be a negative number!");
                     } else {
                         towns.get(command[1])[1] += Integer.parseInt(command[2]);
                         System.out.printf("%d gold added to the city treasury. %s now has %d gold.%n", Integer.parseInt(command[2]), command[1], towns.get(command[1])[1]);
