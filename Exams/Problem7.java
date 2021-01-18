@@ -1,10 +1,12 @@
 package Exams;
 //created by J.M.
+
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Problem7 {
+
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
@@ -21,7 +23,7 @@ public class Problem7 {
                     int digit = message.charAt(j);
                     sb.append(digit).append(" ");
                 }
-                System.out.println(matcher.group("command") + ": "+sb.toString());
+                System.out.println(matcher.group("command") + ": " + sb.toString());
 
             } else {
                 System.out.println("The message is invalid");
