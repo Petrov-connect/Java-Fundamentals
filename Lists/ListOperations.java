@@ -4,10 +4,14 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class ListOperations {
+
     public static void main(String[] args) {
+
         Scanner scan = new Scanner(System.in);
         List<String> numbers= Arrays.stream((scan.nextLine().split("\\s+"))).collect(Collectors.toList());
+
         String input;
+
         while (!"End".equals(input=scan.nextLine())){
             String[] command=input.split("\\s+");
             switch (command[0]){
