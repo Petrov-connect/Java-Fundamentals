@@ -1,26 +1,41 @@
 package MapsAndStreamAPI;
 //created by J.M.
+
 import java.util.*;
 
 public class DragonArmy {
+
     public static void main(String[] args) {
+
         Scanner scan = new Scanner(System.in);
-        int n=Integer.parseInt(scan.nextLine());
-        Map<String,Map<String,List<Double>>>statistic=new LinkedHashMap<>();
-        for (int i = 0; i <n ; i++) {
-            String []input=scan.nextLine().split(" ");
-            String type=input[0]; String name=input[1];
-            double health=250;double damage=45;double armor=10;
-            if(!input[3].equals("null")){
-                health=Double.parseDouble(input[3]);
-            }if(!input[2].equals("null")){
+        int n = Integer.parseInt(scan.nextLine());
+        Map<String, Map<String, List<Double>>> statistic = new LinkedHashMap<>();
+
+        for (int i = 0; i < n; i++) {
+            String[] input = scan.nextLine().split(" ");
+            String type = input[0];
+            String name = input[1];
+            double health = 250;
+            double damage = 45;
+            double armor = 10;
+            if (!input[3].equals("null")) {
+                health = Double.parseDouble(input[3]);
+            }
+            if (!input[2].equals("null")) {
                 damage = Double.parseDouble(input[2]);
-            }if(!input[4].equals("null")){
+            }
+            if (!input[4].equals("null")) {
                 armor = Double.parseDouble(input[4]);
             }
-            statistic.putIfAbsent(type,new TreeMap<>());
-            double finalArmor = armor; double finalHealth = health; double finalDamage = damage;
-            statistic.get(type).put(name,new ArrayList<>(){{add(0, finalDamage);add(1, finalHealth);add(2, finalArmor);}});
+            statistic.putIfAbsent(type, new TreeMap<>());
+            double finalArmor = armor;
+            double finalHealth = health;
+            double finalDamage = damage;
+            statistic.get(type).put(name, new ArrayList<>() {{
+                add(0, finalDamage);
+                add(1, finalHealth);
+                add(2, finalArmor);
+            }});
         }
         statistic.forEach((key1, value1) -> {
             System.out.printf("%s::(%.2f/%.2f/%.2f)%n", key1,
