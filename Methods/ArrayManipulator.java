@@ -3,6 +3,7 @@ package Methods;
 import java.util.*;
 
 public class ArrayManipulator {
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int [] array= Arrays.stream(scan.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
