@@ -11,7 +11,6 @@ public class EqualsSum {
         Scanner scan = new Scanner(System.in);
         int[] arr = Arrays.stream(scan.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 
-        int index = -1;
         for (int i = 0; i < arr.length; i++) {
             int sumLeft = 0;
             int sumRight = 0;
@@ -22,14 +21,10 @@ public class EqualsSum {
                 sumRight += arr[j];
             }
             if (sumLeft == sumRight) {
-                index = i;
-                break;
+                System.out.println(i);
+                return;
             }
         }
-        if (index > -1) {
-            System.out.println(index);
-        } else {
-            System.out.println("no");
-        }
+        System.out.println("no");
     }
 }
