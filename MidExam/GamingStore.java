@@ -1,13 +1,17 @@
 package MidExam;
 //created by J.M.
+
 import java.util.Scanner;
 
 public class GamingStore {
+
     public static void main(String[] args) {
+
         Scanner scan = new Scanner(System.in);
         double balance=Double.parseDouble(scan.nextLine());
         String game = scan.nextLine();
         double spend=0;
+
         while (!game.equals("Game Time")) {
             double price=0; boolean found=true;
             switch (game) {
