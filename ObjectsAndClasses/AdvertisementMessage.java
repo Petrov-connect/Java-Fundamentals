@@ -1,13 +1,15 @@
 package ObjectsAndClasses;
 //created by J.M.
+
 import java.util.*;
 import java.util.stream.IntStream;
 
 public class AdvertisementMessage {
+
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        int n=Integer.parseInt(scan.nextLine());
+        int n = Integer.parseInt(scan.nextLine());
 
         IntStream.range(0, n).mapToObj(i -> new Message()).map(Message::output).forEach(System.out::println);
     }
@@ -18,10 +20,10 @@ public class AdvertisementMessage {
         String[] authors = {"Diana", "Petya", "Stella", "Elena", "Katya", "Iva", "Annie", "Eva"};
         String[] cities = {"Burgas", "Sofia", "Plovdiv", "Varna", "Ruse"};
 
-        Random random=new Random();
+        Random random = new Random();
 
-        public String output (){
-            return String.format("%s %s %s – %s",phrases[random.nextInt(phrases.length)],events[random.nextInt(events.length)],authors[random.nextInt(authors.length)],cities[random.nextInt(cities.length)]);
+        public String output() {
+            return String.format("%s %s %s – %s", phrases[random.nextInt(phrases.length)], events[random.nextInt(events.length)], authors[random.nextInt(authors.length)], cities[random.nextInt(cities.length)]);
         }
     }
 }
