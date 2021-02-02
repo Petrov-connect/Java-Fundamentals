@@ -1,5 +1,6 @@
 package ObjectsAndClasses;
 //created by J.M.
+
 import java.util.*;
 
 public class PiratesWhitClass {
