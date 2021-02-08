@@ -9,14 +9,15 @@ public class EncryptSortAndPrintArray {
 
         Scanner scan = new Scanner(System.in);
         int n = Integer.parseInt(scan.nextLine());
-
+        char[] equals = new char[]{'A', 'E', 'O', 'U', 'I', 'a', 'e', 'o', 'u', 'i'};
         int[] numbers = new int[n];
+
         for (int i = 0; i < n; i++) {
             String input = scan.nextLine();
             int sum = 0;
+
             for (int j = 0; j < input.length(); j++) {
                 char symbol = (input).charAt(j);
-                char[] equals = new char[]{'A', 'E', 'O', 'U', 'I', 'a', 'e', 'o', 'u', 'i'};
                 boolean isVowel = false;
                 for (char equal : equals) {
                     if (symbol == equal) {
