@@ -11,7 +11,6 @@ public class ListManipulationAdvanced {
         Scanner scan = new Scanner(System.in);
         List<Integer> numbersList = Arrays.stream(scan.nextLine().split("\\s+"))
                 .map(Integer::parseInt).collect(Collectors.toList());
-
         String input;
 
         while (!("end").equals(input = scan.nextLine())) {
@@ -21,7 +20,7 @@ public class ListManipulationAdvanced {
                     checkTheContents(numbersList, command);
                     break;
                 case "Print":
-                    printAllEvenOddNumbers(numbersList, command);
+                    printAllEvenOrOddNumbers(numbersList, command);
                     break;
                 case "Get":
                     printSumOfNumbers(numbersList);
@@ -59,14 +58,10 @@ public class ListManipulationAdvanced {
     }
 
     static void printSumOfNumbers(List<Integer> numbersList) {
-        int sumNumbers = 0;
-        for (Integer integer : numbersList) {
-            sumNumbers += integer;
-        }
-        System.out.println(sumNumbers);
+        System.out.println(numbersList.stream().mapToInt(integer -> integer).sum());
     }
 
-    private static void printAllEvenOddNumbers(List<Integer> numbersList, String[] command) {
+    private static void printAllEvenOrOddNumbers(List<Integer> numbersList, String[] command) {
         StringBuilder odd = new StringBuilder();
         StringBuilder even = new StringBuilder();
         for (Integer integer : numbersList) {
@@ -76,18 +71,10 @@ public class ListManipulationAdvanced {
                 odd.append(integer).append(" ");
             }
         }
-        if (command[1].equals("even")) {
-            System.out.println(even);
-        } else {
-            System.out.println(odd);
-        }
+        System.out.println(command[1].equals("even") ? even : odd);
     }
 
     private static void checkTheContents(List<Integer> numbersList, String[] command) {
-        if (numbersList.contains(Integer.parseInt(command[1]))) {
-            System.out.println("Yes");
-        } else {
-            System.out.println("No such number");
-        }
+        System.out.println(numbersList.contains(Integer.parseInt(command[1])) ? "Yes" : "No such number");
     }
 }
