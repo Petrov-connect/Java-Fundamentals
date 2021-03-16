@@ -22,13 +22,3 @@ public class PascalTriangle {
         }
     }
 }
-
-//        for(int i=0; i<n; i++) {
-//            for(int k=i; k>0; k--) {
-//                arr[k] = arr[k - 1] + arr[k];
-//            }
-//                for (int j = 0; j <= i; j++) {
-//                    System.out.print(arr[j] + " ");
-//                }
-//                System.out.println();
-//        }
