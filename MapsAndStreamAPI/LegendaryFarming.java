@@ -46,8 +46,10 @@ public class LegendaryFarming {
                 }
             }
         }
+
         materials.entrySet().stream().sorted((a, b) -> b.getValue().compareTo(a.getValue()))
                 .forEach(e -> System.out.printf("%s: %d%n", e.getKey(), e.getValue()));
+
         junk.forEach((key, value) -> System.out.printf("%s: %d%n", key, value));
     }
 }
