@@ -17,14 +17,20 @@ public class LegendaryFarming {
         boolean isValid = false;
 
         while (!isValid) {
+
             String[] input = scan.nextLine().split("\\s+");
+
             for (int i = 0; i < input.length; i += 2) {
+
                 String key = input[i + 1].toLowerCase();
                 int value = Integer.parseInt(input[i]);
+
                 if (key.equals("shards") || key.equals("fragments") || key.equals("motes")) {
                     materials.put(key, materials.get(key) + value);
+
                     if (materials.get(key) >= 250) {
                         materials.put(key, materials.get(key) - 250);
+
                         if (key.equals("shards")) {
                             System.out.println("Shadowmourne obtained!");
                         } else if (key.equals("fragments")) {
